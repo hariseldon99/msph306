@@ -13,6 +13,13 @@ List of Lab Exercises
 
 Use the following links:
 
+* [Lab 1: Introduction](Lab01.ipynb)
+
+* [Lab 2:](Lab02.ipynb)
+
+* [Lab 3: Introduction to NumPy](Lab03.ipynb)
+
+
 
 Additional Notes
 =========================
