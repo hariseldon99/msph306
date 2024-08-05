@@ -13,11 +13,21 @@ List of Lab Exercises
 
 Use the following links:
 
-* [Lab 1: Introduction](Lab01.ipynb)
+* [Lab 1: Introduction to Python](Lab01.ipynb)
 
-* [Lab 2:](Lab02.ipynb)
+* [Lab 2: Strings and Conditionals](Lab02.ipynb)
 
-* [Lab 3: Introduction to NumPy](Lab03.ipynb)
+* [Lab 3: Loops, Lists, Dictionaries and Tuples](Lab03.ipynb)
+
+* [Lab 4: Introduction to NumPy](Lab04.ipynb)
+
+* [Lab 5: Introduction to Matplotlib](Lab05.ipynb)
+
+* [Lab 6: Curve-fitting with Scipy](Lab06.ipynb)
+
+* [Lab 7: Linear Algebra with NumPy](Lab07.ipynb)
+
+* [Lab 8: Ordinary Differential Equations](Lab08.ipynb)
 
 
 
