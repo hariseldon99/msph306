@@ -9,6 +9,10 @@ The simulations are written in the [Python programming language](https://www.pyt
 
 The website for this Course is @ [https://bit.ly/msph306](https://bit.ly/msph306)
 
+You can also scan this QR-code to access this website:
+
+![QR-Code](images/bit.ly_msph306.png "QR Code")
+
 
 List of Lab Exercises
 =========================
