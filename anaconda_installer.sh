@@ -1,6 +1,7 @@
 #!/bin/bash
 
 ANACONDA_INSTALLER="Anaconda3-2024.06-1-Linux-x86_64.sh"
+PYVER="python3.12"
 
 # Download the latest Anaconda installer
 curl -O https://repo.anaconda.com/archive/$ANACONDA_INSTALLER
@@ -19,7 +20,7 @@ cat <<EOF > $HOME/Desktop/Anaconda-Navigator.desktop
 Name=Anaconda Navigator
 Comment=Launch Anaconda Navigator
 Exec=$HOME/anaconda3/bin/anaconda-navigator
-Icon=$HOME/anaconda3/lib/python3.9/site-packages/anaconda_navigator/static/images/anaconda-icon-256x256.png
+Icon=$HOME/anaconda3/lib/$PYVER/site-packages/anaconda_navigator/static/images/anaconda-icon-256x256.png
 Terminal=false
 Type=Application
 Categories=Development;Education;
@@ -31,6 +32,6 @@ chmod +x $HOME/Desktop/Anaconda-Navigator.desktop
 #Copy the repository to Desktop
 cp -r ../msph306 $HOME/Desktop
 # Make all files read only
-chmod -R 444 $HOME/Desktop/msph306
+chmod -R 544 $HOME/Desktop/msph306
 
 echo "Anaconda installation and desktop icon creation complete!"
