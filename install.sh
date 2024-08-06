@@ -1,6 +1,8 @@
 #!/bin/bash
 
-ANACONDA_INSTALLER=./anaconda_installer/Anaconda3-2024.06-1-Linux-x86_64.sh
+ANACONDA_INST_DIR=./anaconda_installer
+ANACONDA_INSTALLER_NAME=Anaconda3-2024.06-1-Linux-x86_64.sh
+
 PYVER="python3.12"
 REPONAME="msph306"
 DESK_ICO=$HOME/Desktop/Anaconda-Navigator.desktop
@@ -12,7 +14,7 @@ echo "Starting Anaconda Installation"
 #curl -O https://repo.anaconda.com/archive/$ANACONDA_INSTALLER
 
 # Install Anaconda silently
-bash $ANACONDA_INSTALLER -b -p $HOME/anaconda3
+bash $ANACONDA_INST_DIR/$ANACONDA_INSTALLER_NAME -b -p $HOME/anaconda3
 
 # Initialize Anaconda but do not activate on startup
 eval "$($HOME/anaconda3/bin/conda shell.bash hook)"
@@ -39,7 +41,7 @@ chmod +x $DESK_ICO
 
 #Copy the repository to homedir
 mkdir $HOME/$REPONAME
-rsync -vra --progress --exclude=${ANACONDA_INSTALLER} ./ $HOME/$REPONAME
+rsync -vra --exclude="${ANACONDA_INSTALLER_NAME}" --progress ./ $HOME/$REPONAME
 
 # Make all files read only
 chmod -R 544 $HOME/$REPONAME
