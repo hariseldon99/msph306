@@ -32,6 +32,7 @@ gio set $HOME/Desktop/Anaconda-Navigator.desktop metadata::trusted true
 chmod +x $HOME/Desktop/Anaconda-Navigator.desktop
 
 #Copy the repository to homedir
+shopt -s extglob
 cp -r !($ANACONDA_INSTALLER) ../$REPONAME $HOME
 
 # Make all files read only
