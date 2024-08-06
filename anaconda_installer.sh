@@ -39,8 +39,7 @@ chmod +x $DESK_ICO
 
 #Copy the repository to homedir
 mkdir $HOME/$REPONAME
-cp -r * $HOME/$REPONAME
-rm -f $HOME/$REPONAME/$ANACONDA_INSTALLER
+rsync -vra --progress --exclude '${ANACONDA_INSTALLER}' ./ $HOME/$REPONAME
 
 # Make all files read only
 chmod -R 544 $HOME/$REPONAME
