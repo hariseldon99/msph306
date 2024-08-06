@@ -33,7 +33,8 @@ chmod +x $HOME/Desktop/Anaconda-Navigator.desktop
 
 #Copy the repository to homedir
 shopt -s extglob
-cp -r !($ANACONDA_INSTALLER) ../$REPONAME $HOME
+mkdir $HOME/$REPONAME
+cp -r !($ANACONDA_INSTALLER) * $HOME/$REPONAME
 
 # Make all files read only
 chmod -R 544 $HOME/$REPONAME
