@@ -1,6 +1,6 @@
 #!/bin/bash
 
-ANACONDA_INSTALLER="Anaconda3-2024.06-1-Linux-x86_64.sh"
+ANACONDA_INSTALLER=./anaconda_installer/Anaconda3-2024.06-1-Linux-x86_64.sh
 PYVER="python3.12"
 REPONAME="msph306"
 DESK_ICO=$HOME/Desktop/Anaconda-Navigator.desktop
