@@ -19,7 +19,7 @@ eval "$($HOME/anaconda3/bin/conda shell.bash hook)"
 conda init
 conda config --set auto_activate_base false
 
-echo "Creating Desktop icon @ ${DESK_ICO} and copying MSPH306 git repo to ${$HOME}"
+echo "Creating Desktop icon @ ${DESK_ICO} and copying MSPH306 git repo to ${HOME}"
 
 # Create a desktop entry for Anaconda Navigator
 cat <<EOF > $DESK_ICO
@@ -39,7 +39,7 @@ chmod +x $DESK_ICO
 
 #Copy the repository to homedir
 mkdir $HOME/$REPONAME
-rsync -vra --progress --exclude '${ANACONDA_INSTALLER}' ./ $HOME/$REPONAME
+rsync -vra --progress --exclude=${ANACONDA_INSTALLER} ./ $HOME/$REPONAME
 
 # Make all files read only
 chmod -R 544 $HOME/$REPONAME
