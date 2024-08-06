@@ -2,9 +2,10 @@
 
 ANACONDA_INSTALLER="Anaconda3-2024.06-1-Linux-x86_64.sh"
 PYVER="python3.12"
+REPONAME="msph306"
 
 # Download the latest Anaconda installer
-curl -O https://repo.anaconda.com/archive/$ANACONDA_INSTALLER
+#curl -O https://repo.anaconda.com/archive/$ANACONDA_INSTALLER
 
 # Install Anaconda silently
 bash $ANACONDA_INSTALLER -b -p $HOME/anaconda3
@@ -27,11 +28,13 @@ Categories=Development;Education;
 EOF
 
 # Make the desktop entry executable
+gio set $HOME/Desktop/Anaconda-Navigator.desktop metadata::trusted true
 chmod +x $HOME/Desktop/Anaconda-Navigator.desktop
 
-#Copy the repository to Desktop
-cp -r ../msph306 $HOME/Desktop
+#Copy the repository to homedir
+cp -r !($ANACONDA_INSTALLER) ../$REPONAME $HOME
+
 # Make all files read only
-chmod -R 544 $HOME/Desktop/msph306
+chmod -R 544 $HOME/$REPONAME
 
 echo "Anaconda installation and desktop icon creation complete!"
