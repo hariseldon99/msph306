@@ -13,6 +13,11 @@ You can also scan this QR-code to access this website:
 
 ![QR-Code](images/bit.ly_msph306.png "QR Code")
 
+For C programmers
+=========================
+If you have any prior programming experience in C or a similar language like C++ or FORTRAN, you can get a quick overview of python in the notebook linked below:
+
+* [Python for C Programmers](python-for-C-programmers.ipynb)
 
 List of Lab Exercises
 =========================
