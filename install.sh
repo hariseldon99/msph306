@@ -10,8 +10,11 @@ DESK_ICO=$HOME/Desktop/Anaconda-Navigator.desktop
 
 echo "Starting Anaconda Installation"
 
-# Download the latest Anaconda installer
-#curl -O https://repo.anaconda.com/archive/$ANACONDA_INSTALLER
+# If unavailable, then download the latest Anaconda installer
+if ! test -f $ANACONDA_INST_DIR/$ANACONDA_INSTALLER_NAME; then 
+	mkdir -p $ANACONDA_INST_DIR
+	curl -o ./$ANACONDA_INST_DIR/$ANACONDA_INSTALLER_NAME -O https://repo.anaconda.com/archive/$ANACONDA_INSTALLER_NAME
+fi
 
 # Install Anaconda silently
 bash $ANACONDA_INST_DIR/$ANACONDA_INSTALLER_NAME -b -p $HOME/anaconda3
