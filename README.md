@@ -26,7 +26,7 @@ Use the following links:
 
 * [Lab 1: Introduction to Python](Lab01.ipynb)
 
-* [Lab 2: Strings and Conditionals](Lab02.ipynb)
+* [Lab 2: Variables, Strings and Conditionals](Lab02.ipynb)
 
 * [Lab 3: Loops, Lists, Dictionaries and Tuples](Lab03.ipynb)
 
