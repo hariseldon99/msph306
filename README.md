@@ -26,9 +26,9 @@ Use the following links:
 
 * [Lab 1: Introduction to Python](Lab01.ipynb)
 
-* [Lab 2: Variables, Strings and Conditionals](Lab02.ipynb)
+* [Lab 2: Basic Programming I](Lab02.ipynb)
 
-* [Lab 3: Loops, Lists, Dictionaries and Tuples](Lab03.ipynb)
+* [Lab 3: Basic Programming II](Lab03.ipynb)
 
 * [Lab 4: Introduction to NumPy](Lab04.ipynb)
 
