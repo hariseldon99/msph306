@@ -93,7 +93,7 @@ Suggested Textbooks:
 =========================
 1. Yashavant Kanetkar, Let Us Python, (3rd Ed.), ISBN: [9789388511568](https://www.amazon.in/Let-Us-Python-Future-Embrace-dp-9391392253/dp/9391392253/)
 
-2. Alex Gezerlis, Numerical Methods in Physics with Python. Cambridge University Press; 2020. ISBN: [9781009303866](https://www.amazon.in/Numerical-Methods-Physics-Python-Gezerlis/dp/1009303864)
+2. Alex Gezerlis, Numerical Methods in Physics with Python. Cambridge University Press; 2020. ISBN: [9781009303866](https://numphyspy.org)
 
 3. Abhijit Kar Gupta, Scientific Computing in Python, ISBN: [9788194956761](https://www.amazon.in/PYTHON-ABHIJIT-KAR-GUPTA/dp/8194956765/). [Author Website](https://panskurabanamalicollege.org/physics-profile/PHYSICS-ABHIJIT-KAR-GUPTA.pdf).
 
