@@ -34,21 +34,16 @@ List of Lab Exercises
 
 Use the following links:
 
-* [Lab 1: Introduction to Python](Lab01.ipynb)
-
-* [Lab 2: Basic Programming I](Lab02.ipynb)
-
-* [Lab 3: Basic Programming II](Lab03.ipynb)
-
-* [Lab 4: Introduction to NumPy](Lab04.ipynb)
-
-* [Lab 5: Introduction to Matplotlib](Lab05.ipynb)
-
-* [Lab 6: Curve-fitting with Scipy](Lab06.ipynb)
-
-* [Lab 7: Linear Algebra with NumPy](Lab07.ipynb)
-
-* [Lab 8: Ordinary Differential Equations](Lab08.ipynb)
+| Lab no. | Lab Notebooks   | Google Colab Links |
+| ------------- | ------------- |  ------------- |
+| Lab 01 | [Introduction to Python](Lab01.ipynb)  | <a target="_blank" href="https://colab.research.google.com/github/hariseldon99/msph306/blob/main/Lab01.ipynb"> <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a> |
+| Lab 02 | [Basic Programming I](Lab02.ipynb)  | <a target="_blank" href="https://colab.research.google.com/github/hariseldon99/msph306/blob/main/Lab02.ipynb"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>  |  
+| Lab 03 | [Basic Programming II](Lab03.ipynb) |<a target="_blank" href="https://colab.research.google.com/github/hariseldon99/msph306/blob/main/Lab03.ipynb"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>  |
+| Lab 04 | [Introduction to NumPy](Lab04.ipynb) | <a target="_blank" href="https://colab.research.google.com/github/hariseldon99/msph306/blob/main/Lab04.ipynb"> <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>  |
+| Lab 05| [Introduction to Matplotlib](Lab05.ipynb) | <a target="_blank" href="https://colab.research.google.com/github/hariseldon99/msph306/blob/main/Lab05.ipynb"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/> </a>   |
+| Lab 06 | [Curve-fitting with Scipy](Lab06.ipynb)  | <a target="_blank" href="https://colab.research.google.com/github/hariseldon99/msph306/blob/main/Lab06.ipynb"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/> </a>   |
+|Lab 07 | [Linear Algebra with NumPy](Lab07.ipynb)  | <a target="_blank" href="https://colab.research.google.com/github/hariseldon99/msph306/blob/main/Lab07.ipynb"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>
+| lab 08 | [Ordinary Differential Equations](Lab08.ipynb) | <a target="_blank" href="https://colab.research.google.com/github/hariseldon99/msph306/blob/main/Lab08.ipynb"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>
 
 
 Additional Notes
