@@ -1,41 +1,42 @@
 #!/bin/bash
 
-ANACONDA_INST_DIR="./anaconda_installer"
-PYVER="python3.12"
-REPONAME="msph306"
-DESK_ICO="$HOME/Anaconda-Navigator.desktop"
-ANACONDA_INSTALLER_NAME="Anaconda3-2024.10-1-Linux-x86_64.sh"
+# Check if the correct number of arguments are provided
+if [ "$#" -ne 1 ]; then
+    echo "Usage: $0 YYYYMMDDHHMM"
+    exit 1
+fi
 
-# Function to create desktop entry
-create_desktop_entry() {
-    cat <<EOF > "$DESK_ICO"
-[Desktop Entry]
-Name=Anaconda Navigator
-Comment=Launch Anaconda Navigator
-Exec=$HOME/anaconda3/bin/anaconda-navigator
-Icon=$HOME/anaconda3/lib/$PYVER/site-packages/anaconda_navigator/static/images/anaconda-icon-256x256.png
-Terminal=false
-Type=Application
-Categories=Development;Education;
-EOF
-    gio set "$DESK_ICO" metadata::trusted true
-    chmod +x "$DESK_ICO"
-}
+# Get the correct date and time from the input argument
+datetime=$1
 
-# Main script execution
-echo "Starting ${ANACONDA_INSTALLER_NAME} Installation"
-bash "${ANACONDA_INST_DIR}/${ANACONDA_INSTALLER_NAME}" -b -p "$HOME/anaconda3"
-eval "$($HOME/anaconda3/bin/conda shell.bash hook)"
-conda init
-conda config --set auto_activate_base false
+# Set the correct date and time
+sudo date -s "$datetime"
 
-echo "Creating Desktop icon @ ${DESK_ICO} and copying MSPH306 git repo to ${HOME}"
-create_desktop_entry
+# Wait 30 seconds
+sleep 30
 
-mkdir "$HOME/$REPONAME"
-chmod -R 544 $HOME/$REPONAME
-chmod -R 544 $HOME/anaconda3
-chmod -R 544 $DESK_ICO
-rsync -vra --exclude="${ANACONDA_INSTALLER_NAME}" --progress ./ "$HOME/$REPONAME"
+# Download the miniforge installer
+wget https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-Linux-x86_64.sh -O /tmp/Miniforge3-Linux-x86_64.sh
 
-echo "Installation and desktop icon creation complete!"
+# Install miniforge to userspace silently
+bash /tmp/Miniforge3-Linux-x86_64.sh -b -p $HOME/miniforge3
+
+# Initialize conda
+$HOME/miniforge3/bin/conda init
+
+# Install Jupyter Notebook, numpy, scipy, and matplotlib
+$HOME/miniforge3/bin/conda install -y jupyter numpy scipy matplotlib
+
+# Install git
+sudo apt-get update && sudo apt-get install -y git
+
+# Clone the repository
+git clone https://github.com/hariseldon99/msph306 $HOME/msph306
+
+# Remove base environment from bashrc
+sed -i '/conda activate base/d' $HOME/.bashrc
+
+# Reload bashrc
+source $HOME/.bashrc
+
+echo "Installation complete"
